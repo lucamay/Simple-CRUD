@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var colaborador_component_1 = require("./colaboradores/colaborador.component");
+var addcolaborador_component_1 = require("./colaboradores/addcolaborador.component");
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
@@ -18,7 +19,8 @@ AppRoutingModule = __decorate([
     core_1.NgModule({
         imports: [
             router_1.RouterModule.forRoot([
-                { path: '', component: colaborador_component_1.ColaboradorComponent },
+                { path: 'colaboradores', component: colaborador_component_1.ColaboradorComponent },
+                { path: '', component: addcolaborador_component_1.AddColaboradorComponent },
                 { path: '**', redirectTo: '', pathMatch: 'full' }
             ], { preloadingStrategy: router_1.PreloadAllModules })
         ],

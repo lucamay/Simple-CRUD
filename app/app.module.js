@@ -13,6 +13,7 @@ var app_routing_1 = require("./app.routing");
 var app_component_1 = require("./app.component");
 var colaborador_component_1 = require("./colaboradores/colaborador.component");
 var nav_component_1 = require("./nav/nav.component");
+var addcolaborador_component_1 = require("./colaboradores/addcolaborador.component");
 var colaborador_service_1 = require("./colaboradores/colaborador.service");
 var AppModule = (function () {
     function AppModule() {
@@ -27,7 +28,8 @@ AppModule = __decorate([
         ],
         declarations: [app_component_1.AppComponent,
             colaborador_component_1.ColaboradorComponent,
-            nav_component_1.NavbarComponent
+            nav_component_1.NavbarComponent,
+            addcolaborador_component_1.AddColaboradorComponent
         ],
         providers: [colaborador_service_1.ColaboradorService],
         bootstrap: [app_component_1.AppComponent]

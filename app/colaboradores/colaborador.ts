@@ -5,4 +5,5 @@ export interface Colaborador {
   correo: string;
   telefono: number;
   disponibilidad: number;
+  estado: string;
 }

@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { ColaboradorComponent } from './colaboradores/colaborador.component';
 import { NavbarComponent } from './nav/nav.component';
+import { AddColaboradorComponent} from './colaboradores/addcolaborador.component';
 
 import { ColaboradorService } from './colaboradores/colaborador.service';
 
@@ -17,7 +18,8 @@ import { ColaboradorService } from './colaboradores/colaborador.service';
                    ],
   declarations: [ AppComponent,
                           ColaboradorComponent,
-                          NavbarComponent
+                          NavbarComponent,
+                          AddColaboradorComponent
                           ],
   providers: [ ColaboradorService ],
   bootstrap:    [ AppComponent ]

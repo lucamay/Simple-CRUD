@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>Postulate como colaborador</h1>
+
+  <form *ngIf=true>
+    <h2>Postularse como colaborador</h2>
+    <p>Nombres: <input type="text"
+                                 name="nombre"
+                                 [(ngModel)]="newColaborador.nombre" /></p>
+    <p>Apellidos: <input type="text"
+                                          name="Apellidos"
+                                          [(ngModel)]="newColaborador.apellidos" /></p>
+    <p>Correo: <input type="email"
+                                 name="apellido"
+                                 [(ngModel)]="newColaborador.apellido" /></p>
+    <p>Telefono: <input type="text"
+                                name="telefono"
+                                [(ngModel)]="newColaborador.telefono" /></p>
+    <p>
+    <p>Disponibilidad de Tiempo: <input type="text"
+                                name="disponibilidad"
+                                [(ngModel)]="newColaborador.disponibilidad" /></p>
+    <p>
+      <button type="button"
+                   class="btn btn-primary"
+                   (click)="saveColaborador(newColaborador)">Enviar</button>
+      <button type="button"
+                   class="btn btn-warning"
+                   (click)="cancelNewColaborador()">Cancelar</button>
+    </p>
+   </form>
+
+  </div>
+</div>

@@ -10,7 +10,8 @@
         <th class="text-center">Correo</th>
         <th class="text-center">Telefono</th>
         <th class="text-center">Disponibilidad de Tiempo</th>        
-        <th class="text-center">&nbsp;</th>
+        <th class="text-center">Estado</th>     
+        <th class="text-center">Acción</th>
       </tr>
     </thead>
     <tbody>
@@ -21,79 +22,16 @@
         <td>{{ colaborador.correo }}</td>
         <td>{{ colaborador.telefono }}</td>
         <td>{{ colaborador.disponibilidad}}</td>
+        <td>{{ colaborador.estado}}</td>
         <td>
-          <button class="btn btn-info"
-                        (click)="showEditColaboradorForm(colaborador)">
-                       <i class="fa fa-edit"></i>
-              </button>
-          <button class="btn btn-danger"
-                       (click)="removeColaborador(colaborador)">
-                       <i class="fa fa-minus"></i>
-            </button>
+          <select class="form-control" id="sel1">
+            <option>Aceptar</option>
+            <option>Rechazar</option>
+          </select>
         </td>
       </tr>
     </tbody>
   </table>
 
-  <button class="btn btn-success"
-               (click)="showAddColaboradorForm()"><i class="fa fa-plus"></i></button>
-  <br />
-  <br />
-
-  <form *ngIf="colaboradorForm">
-    <h2>Postularse como colaborador</h2>
-    <p>Nombres: <input type="text"
-                                 name="nombre"
-                                 [(ngModel)]="newColaborador.nombre" /></p>
-    <p>Apellidos: <input type="text"
-                                          name="Apellidos"
-                                          [(ngModel)]="newColaborador.apellidos" /></p>
-    <p>Correo: <input type="email"
-                                 name="apellido"
-                                 [(ngModel)]="newColaborador.apellido" /></p>
-    <p>Telefono: <input type="text"
-                                name="telefono"
-                                [(ngModel)]="newColaborador.telefono" /></p>
-    <p>
-    <p>Disponibilidad de Tiempo: <input type="text"
-                                name="disponibilidad"
-                                [(ngModel)]="newColaborador.disponibilidad" /></p>
-    <p>
-      <button type="button"
-                   class="btn btn-primary"
-                   (click)="saveColaborador(newColaborador)">Enviar</button>
-      <button type="button"
-                   class="btn btn-warning"
-                   (click)="cancelNewColaborador()">Cancelar</button>
-    </p>
-   </form>
-
-    <form *ngIf="editColaboradorForm">
-    <h2>Aceptar Colaborador</h2>
-    <p>Nombre: <input type="text"
-                                 name="name"
-                                 [(ngModel)]="editedColaborador.nombre" /></p>
-    <p>Apellidos: <input type="text"
-                                          name="apellido"
-                                          [(ngModel)]="editedColaborador.apellido" /></p>
-    <p>Correo: <input type="email"
-                                 name="apellido"
-                                 [(ngModel)]="newColaborador.apellido" /></p>
-    <p>Telefono: <input type="text"
-                                name="telefono"
-                                [(ngModel)]="newColaborador.telefono" /></p>
-    <p>
-    <p>Disponibilidad de tiempo: <input type="text"
-                                name="disponibilidad"
-                                [(ngModel)]="editedColaborador.disponibilidad" /></p>
-    <p>
-      <button type="button"
-                   class="btn btn-primary"
-                   (click)="updateColaborador(editedColaborador)">Enviar</button>
-      <button type="button"
-                   class="btn btn-warning"
-                   (click)="cancelEdits()">Cancelar</button>
-    </p>
-   </form>
   </div>
 </div>
